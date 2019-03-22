@@ -30,10 +30,11 @@ class VM:
         inputfile = open ('./unit/' + self.name + '.vm.json')
         # Parse input as json
         input = json.load(inputfile)
-        if (protocol == 'tcp'):
-            return input.tcp
-        if (protocol == 'udp'):
-            return input.udp
+        for element in input:        
+            if (protocol == 'tcp'):
+                return element.tcp
+            if (protocol == 'udp'):
+                return element.udp
         # Return none if nothing is in the list
         return None
     ###
