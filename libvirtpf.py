@@ -27,7 +27,7 @@ class VM:
     ###
     def getRules(self, protocol):
         # Open file and read input
-        inputfile = open ('./unit/' + self.name + 'vm.json')
+        inputfile = open ('./unit/' + self.name + '.vm.json')
         # Parse input as json
         input = json.load(inputfile)
         if (protocol == 'tcp'):
